@@ -3,188 +3,145 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Ganpati Invitation | Shree Amcha Ganpati Mandal</title>
+<title>Ganpati Invitation</title>
 
 <style>
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
+*{box-sizing:border-box}
 
 body{
+    margin:0;
     font-family:Arial,Helvetica,sans-serif;
-    min-height:100vh;
-    background:
-        radial-gradient(circle at top,#fff5c7 0%,#ffc44d 35%,#d94a00 70%,#6d1200 100%);
-    color:#4b1600;
+    background:linear-gradient(135deg,#fff1b8,#ffb52e,#8b1800);
+    color:#501700;
 }
 
 .container{
-    width:100%;
     max-width:760px;
     margin:auto;
-    padding:15px;
+    padding:12px;
 }
 
 .card{
     background:#fff;
     border-radius:28px;
     overflow:hidden;
-    box-shadow:0 20px 60px rgba(70,20,0,.40);
-    border:2px solid #ffd45e;
+    box-shadow:0 20px 60px rgba(60,20,0,.4);
 }
-
-/* HEADER */
 
 .header{
     text-align:center;
-    padding:30px 18px 25px;
-    background:
-        linear-gradient(180deg,#fff8d8,#ffd15c);
+    padding:28px 15px;
+    background:linear-gradient(#fff7d1,#ffd05b);
 }
 
 .om{
-    font-size:48px;
-    margin-bottom:5px;
+    font-size:42px;
 }
 
 .ganesh{
-    font-size:60px;
-    margin-bottom:5px;
+    font-size:55px;
 }
 
 .title{
-    font-size:38px;
+    font-size:36px;
     font-weight:900;
-    color:#a51b00;
-    line-height:1.2;
+    color:#a51d00;
 }
 
-.morya{
-    font-size:24px;
-    font-weight:bold;
-    color:#d25b00;
+.subtitle{
     margin-top:8px;
+    font-size:20px;
+    font-weight:bold;
+    color:#c45100;
 }
 
 .mandal{
     display:inline-block;
-    margin-top:14px;
-    padding:10px 18px;
-    border-radius:50px;
-    background:#a51b00;
+    margin-top:13px;
+    padding:9px 16px;
+    border-radius:30px;
+    background:#a51d00;
     color:white;
     font-weight:bold;
-    font-size:16px;
 }
 
-/* VIDEO */
-
-.video-section{
-    padding:14px;
-    background:#fff;
+.video-box{
+    padding:13px;
 }
 
 video{
     width:100%;
     display:block;
-    max-height:430px;
-    object-fit:cover;
     border-radius:20px;
-    background:#180600;
+    background:#170500;
+    max-height:430px;
 }
 
-/* INVITATION */
-
 .content{
-    padding:22px;
+    padding:20px;
 }
 
 .invitation{
     text-align:center;
-    font-size:19px;
-    line-height:1.75;
-    color:#542000;
+    font-size:18px;
+    line-height:1.7;
 }
 
 .invitation strong{
-    color:#a51b00;
+    color:#a51d00;
 }
 
-/* INFO */
-
-.info{
+.details{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:13px;
+    gap:12px;
     margin:22px 0;
 }
 
-.info-box{
-    background:#fff5d8;
-    border:1px solid #edc157;
+.detail{
+    background:#fff5d7;
+    border:1px solid #e8bd53;
     border-radius:18px;
-    padding:17px 10px;
+    padding:16px 10px;
     text-align:center;
 }
 
-.info-icon{
-    font-size:27px;
-    margin-bottom:6px;
+.icon{
+    font-size:28px;
 }
 
-.info-title{
+.detail b{
     display:block;
-    color:#a51b00;
-    font-weight:bold;
-    margin-bottom:5px;
-    font-size:16px;
+    color:#a51d00;
+    margin:5px 0;
 }
-
-.info-value{
-    font-size:17px;
-    font-weight:bold;
-}
-
-/* FORM */
 
 .form{
-    margin-top:22px;
-    background:#fff8eb;
-    border:1px solid #edca72;
-    border-radius:22px;
+    background:#fff8ec;
+    border:1px solid #e8c86f;
+    border-radius:20px;
     padding:20px;
 }
 
-.form-title{
+.form h2{
     text-align:center;
-    color:#a51b00;
-    font-size:24px;
-    margin-bottom:15px;
+    color:#a51d00;
+    margin-top:0;
 }
 
 label{
     display:block;
-    font-weight:bold;
     margin:13px 0 6px;
+    font-weight:bold;
 }
 
-input,
-textarea{
+input,textarea{
     width:100%;
     padding:14px;
-    border:1px solid #d6ae5c;
+    border:1px solid #d4ae5e;
     border-radius:12px;
-    background:white;
     font-size:16px;
-    outline:none;
-}
-
-input:focus,
-textarea:focus{
-    border-color:#a51b00;
+    background:#fff;
 }
 
 textarea{
@@ -192,77 +149,44 @@ textarea{
     resize:none;
 }
 
-.send-btn{
+button{
     width:100%;
     margin-top:16px;
     padding:15px;
     border:0;
-    border-radius:14px;
-    background:#a51b00;
+    border-radius:13px;
+    background:#a51d00;
     color:white;
     font-size:18px;
     font-weight:bold;
-    cursor:pointer;
 }
 
-.send-btn:hover{
-    background:#7f1300;
+button:disabled{
+    opacity:.6;
 }
 
-.note{
+#status{
     text-align:center;
-    font-size:13px;
-    color:#79512b;
-    margin-top:10px;
+    margin-top:12px;
+    font-weight:bold;
 }
-
-/* FOOTER */
 
 .footer{
     text-align:center;
     padding:20px;
     background:#fff0bd;
     color:#941b00;
-    font-size:17px;
     font-weight:bold;
     line-height:1.6;
 }
 
-/* MOBILE */
-
-@media(max-width:560px){
-
-    .container{
-        padding:8px;
-    }
-
-    .title{
-        font-size:30px;
-    }
-
-    .morya{
-        font-size:20px;
-    }
-
-    .ganesh{
-        font-size:50px;
-    }
-
-    .info{
-        grid-template-columns:1fr;
-    }
-
-    .content{
-        padding:16px;
-    }
-
-    .invitation{
-        font-size:17px;
-    }
+@media(max-width:550px){
+    .title{font-size:29px}
+    .details{grid-template-columns:1fr}
+    .content{padding:15px}
 }
 </style>
 </head>
-
 
 <body>
 
@@ -270,365 +194,346 @@ textarea{
 
 <div class="card">
 
-    <!-- HEADER -->
+<!-- HEADER -->
 
-    <div class="header">
+<div class="header">
 
-        <div class="om">ॐ</div>
+<div class="om">ॐ</div>
 
-        <div class="ganesh">🙏</div>
+<div class="ganesh">🙏</div>
 
-        <div class="title">
-            गणपति बप्पा मोरया!
-        </div>
+<div class="title">
+गणपति बप्पा मोरया!
+</div>
 
-        <div class="morya">
-            मंगलमूर्ति मोरया 🌺
-        </div>
+<div class="subtitle">
+मंगलमूर्ति मोरया 🌺
+</div>
 
-        <div class="mandal">
-            🌺 Shree Amcha Ganpati Mandal 🌺
-        </div>
+<div class="mandal">
+🌺 Shree Amcha Ganpati Mandal 🌺
+</div>
 
-    </div>
+</div>
 
 
-    <!-- VIDEO -->
+<!-- VIDEO -->
 
-    <div class="video-section">
+<div class="video-box">
 
-        <video
-            controls
-            autoplay
-            muted
-            loop
-            playsinline>
+<video controls autoplay muted loop playsinline>
 
-            <source
-                src="ganpati_video.mp4"
-                type="video/mp4">
+<source src="ganpati_video.mp4" type="video/mp4">
 
-            आपका ब्राउज़र वीडियो को सपोर्ट नहीं करता।
+आपका ब्राउज़र वीडियो सपोर्ट नहीं करता।
 
-        </video>
+</video>
 
-    </div>
+</div>
 
 
-    <!-- CONTENT -->
+<!-- CONTENT -->
 
-    <div class="content">
+<div class="content">
 
-        <div class="invitation">
+<div class="invitation">
 
-            <p>
-                <strong>श्री गणेश जी के शुभ आगमन</strong>
-                के पावन अवसर पर
-            </p>
+<p>
+<strong>श्री गणेश जी के शुभ आगमन</strong>
+के पावन अवसर पर
+</p>
 
-            <p>
-                <strong>
-                    Shree Amcha Ganpati Mandal
-                </strong>
-                की ओर से आपको एवं आपके पूरे परिवार को
-                सादर आमंत्रित किया जाता है। 🙏
-            </p>
+<p>
+<strong>Shree Amcha Ganpati Mandal</strong>
+की ओर से आपको एवं आपके पूरे परिवार को
+सादर आमंत्रित किया जाता है। 🙏
+</p>
 
-            <p>
-                आइए, बप्पा के दर्शन करें,
-                उनका आशीर्वाद प्राप्त करें
-                और इस शुभ अवसर को मिलकर यादगार बनाएं। 🌺
-            </p>
+<p>
+आइए बप्पा के दर्शन करें,
+उनका आशीर्वाद प्राप्त करें और
+इस शुभ अवसर को मिलकर यादगार बनाएं। 🌺
+</p>
 
-        </div>
+</div>
 
 
-        <!-- EVENT DETAILS -->
+<!-- DETAILS -->
 
-        <div class="info">
+<div class="details">
 
-            <div class="info-box">
+<div class="detail">
+<div class="icon">📅</div>
+<b>दिनांक</b>
+14 September 2026
+</div>
 
-                <div class="info-icon">
-                    📅
-                </div>
+<div class="detail">
+<div class="icon">⏰</div>
+<b>समय</b>
+11:00 AM
+</div>
 
-                <span class="info-title">
-                    दिनांक
-                </span>
+<div class="detail">
+<div class="icon">📍</div>
+<b>स्थान</b>
+Lakh Bhawn
+</div>
 
-                <span class="info-value">
-                    14 September 2026
-                </span>
+<div class="detail">
+<div class="icon">🛕</div>
+<b>आयोजक</b>
+Shree Amcha Ganpati Mandal
+</div>
 
-            </div>
+</div>
 
 
-            <div class="info-box">
+<!-- FORM -->
 
-                <div class="info-icon">
-                    ⏰
-                </div>
+<div class="form">
 
-                <span class="info-title">
-                    समय
-                </span>
+<h2>💌 अपनी उपस्थिति का संदेश</h2>
 
-                <span class="info-value">
-                    11:00 AM
-                </span>
+<label for="name">
+आपका नाम
+</label>
 
-            </div>
+<input
+id="name"
+type="text"
+placeholder="अपना नाम लिखें"
+maxlength="80">
 
 
-            <div class="info-box">
+<label for="phone">
+मोबाइल नंबर
+</label>
 
-                <div class="info-icon">
-                    📍
-                </div>
+<input
+id="phone"
+type="tel"
+placeholder="अपना मोबाइल नंबर"
+maxlength="15">
 
-                <span class="info-title">
-                    स्थान
-                </span>
 
-                <span class="info-value">
-                    Lakh Bhawn
-                </span>
+<label for="message">
+आपका संदेश
+</label>
 
-            </div>
+<textarea
+id="message"
+placeholder="गणपति बप्पा के लिए अपना संदेश लिखें..."
+maxlength="500"></textarea>
 
 
-            <div class="info-box">
+<button
+id="sendBtn"
+onclick="sendTelegram()">
 
-                <div class="info-icon">
-                    🛕
-                </div>
+🙏 संदेश भेजें
 
-                <span class="info-title">
-                    आयोजन
-                </span>
+</button>
 
-                <span class="info-value">
-                    Shree Amcha Ganpati Mandal
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <!-- MESSAGE FORM -->
-
-        <div class="form">
-
-            <div class="form-title">
-                💌 अपनी उपस्थिति का संदेश
-            </div>
-
-
-            <label for="guestName">
-                आपका नाम
-            </label>
-
-            <input
-                id="guestName"
-                type="text"
-                placeholder="अपना नाम लिखें"
-                maxlength="80">
-
-
-            <label for="mobile">
-                मोबाइल नंबर
-            </label>
-
-            <input
-                id="mobile"
-                type="tel"
-                placeholder="अपना मोबाइल नंबर लिखें"
-                maxlength="15">
-
-
-            <label for="guestMessage">
-                आपका संदेश
-            </label>
-
-            <textarea
-                id="guestMessage"
-                maxlength="500"
-                placeholder="गणपति बप्पा के लिए अपना संदेश लिखें..."></textarea>
-
-
-            <button
-                class="send-btn"
-                onclick="submitInvitation()">
-
-                🙏 संदेश भेजें
-
-            </button>
-
-
-            <div class="note">
-                आपका संदेश सुरक्षित रूप से दर्ज किया जाएगा।
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- FOOTER -->
-
-    <div class="footer">
-
-        🌺 गणपति बप्पा मोरया 🌺<br>
-
-        मंगलमूर्ति मोरया 🙏<br>
-
-        <span>
-            Shree Amcha Ganpati Mandal
-        </span>
-
-    </div>
+<div id="status"></div>
 
 </div>
 
 </div>
 
 
+<!-- FOOTER -->
+
+<div class="footer">
+
+🌺 गणपति बप्पा मोरया 🌺<br>
+मंगलमूर्ति मोरया 🙏<br>
+Shree Amcha Ganpati Mandal
+
+</div>
+
+</div>
+</div>
+
+
 <script>
 
-/*
-====================================================
-FORM SUBMIT
-====================================================
+/* =================================================
+   🔴 TELEGRAM SETTINGS
+   =================================================
 
-अभी Bot Token यहाँ नहीं है।
+   सिर्फ इन 2 जगह अपनी जानकारी डालो।
 
-यह form visitor का नाम, मोबाइल और message
-collect करता है।
-
-Telegram connection बाद में secure server/API
-के द्वारा जोड़ा जाएगा।
-====================================================
-*/
-
-function submitInvitation(){
-
-    const name =
-        document.getElementById("guestName").value.trim();
-
-    const mobile =
-        document.getElementById("mobile").value.trim();
-
-    const message =
-        document.getElementById("guestMessage").value.trim();
+   नया Bot Token इस्तेमाल करना।
+   पुराना leaked token इस्तेमाल मत करना।
+   ================================================= */
 
 
-    if(!name){
+const BOT_TOKEN = "YAHAN_NAYA_BOT_TOKEN_DALO";
 
-        alert("कृपया अपना नाम लिखें।");
-
-        return;
-    }
+const CHAT_ID = "YAHAN_CHAT_ID_DALO";
 
 
-    /*
-    यहाँ आगे secure Telegram API लगाया जाएगा।
-    Bot Token HTML में नहीं रखा जाएगा।
-    */
+/* =================================================
+   TELEGRAM MESSAGE
+   ================================================= */
 
-
-    alert(
-        "धन्यवाद " +
-        name +
-        " 🙏\n\n" +
-        "गणपति बप्पा मोरया! 🌺"
-    );
-
-
-    document.getElementById("guestName").value = "";
-
-    document.getElementById("mobile").value = "";
-
-    document.getElementById("guestMessage").value = "";
-
-}
-
-</script>
-<script>
-const WORKER_URL =
-"https://ganpati-telegram.roshanshaw268.workers.dev";
-
-async function submitInvitation(){
+async function sendTelegram(){
 
     const name =
-        document.getElementById("guestName").value.trim();
+        document.getElementById("name").value.trim();
 
     const phone =
-        document.getElementById("mobile").value.trim();
+        document.getElementById("phone").value.trim();
 
     const message =
-        document.getElementById("guestMessage").value.trim();
+        document.getElementById("message").value.trim();
+
+    const status =
+        document.getElementById("status");
+
+    const button =
+        document.getElementById("sendBtn");
+
 
     if(!name){
-        alert("⚠️ कृपया अपना नाम लिखें।");
+
+        status.innerHTML =
+        "⚠️ कृपया अपना नाम लिखें।";
+
+        status.style.color = "red";
+
         return;
     }
 
-    const button =
-        document.querySelector(".send-btn");
+
+    if(!BOT_TOKEN ||
+       BOT_TOKEN === 8546616479:AAG_6ayy8brsGGex34ivm_FdiGSAZ6Xt164
+
+        status.innerHTML =
+        "⚠️ पहले Bot Token डालें।";
+
+        status.style.color = "red";
+
+        return;
+    }
+
+
+    if(!CHAT_ID ||
+       CHAT_ID === 8685932086
+
+        status.innerHTML =
+        "⚠️ पहले Chat ID डालें।";
+
+        status.style.color = "red";
+
+        return;
+    }
+
 
     button.disabled = true;
-    button.innerHTML = "⏳ संदेश भेजा जा रहा है...";
+
+    button.innerHTML =
+    "⏳ संदेश भेजा जा रहा है...";
+
+
+    const telegramMessage =
+`🎉 GANPATI INVITATION RESPONSE 🎉
+
+👤 नाम: ${name}
+
+📱 मोबाइल: ${phone || "नहीं दिया"}
+
+💬 संदेश:
+${message || "कोई संदेश नहीं"}
+
+📅 तारीख: 14 September 2026
+⏰ समय: 11:00 AM
+📍 स्थान: Lakh Bhawn
+
+🌺 Shree Amcha Ganpati Mandal
+
+🙏 गणपति बप्पा मोरया!`;
+
 
     try{
 
-        const response = await fetch(WORKER_URL,{
-            method:"POST",
-            headers:{
-                "Content-Type":"application/json"
-            },
-            body:JSON.stringify({
-                name:name,
-                phone:phone,
-                message:message
-            })
-        });
+        const response = await fetch(
 
-        const result = await response.json();
+            "https://api.telegram.org/bot"
+            + BOT_TOKEN
+            + "/sendMessage",
 
-        if(!response.ok || !result.ok){
+            {
+
+                method:"POST",
+
+                headers:{
+                    "Content-Type":
+                    "application/json"
+                },
+
+                body:JSON.stringify({
+
+                    chat_id:CHAT_ID,
+
+                    text:telegramMessage
+
+                })
+
+            }
+
+        );
+
+
+        const data =
+        await response.json();
+
+
+        if(!data.ok){
+
             throw new Error(
-                result.error || "Telegram message नहीं गया"
+                data.description ||
+                "Telegram error"
             );
+
         }
 
-        alert(
-            "✅ आपका संदेश Telegram पर भेज दिया गया!\n\n" +
-            "गणपति बप्पा मोरया 🙏🌺"
-        );
 
-        document.getElementById("guestName").value="";
-        document.getElementById("mobile").value="";
-        document.getElementById("guestMessage").value="";
+        status.innerHTML =
+        "✅ आपका संदेश Telegram पर भेज दिया गया!";
 
-    }catch(error){
+        status.style.color = "green";
 
-        alert(
-            "❌ Message नहीं गया!\n\n" +
-            error.message
-        );
 
-    }finally{
+        document.getElementById("name").value="";
 
-        button.disabled = false;
-        button.innerHTML = "🙏 संदेश भेजें";
+        document.getElementById("phone").value="";
+
+        document.getElementById("message").value="";
+
 
     }
+
+    catch(error){
+
+        status.innerHTML =
+        "❌ Message नहीं गया: "
+        + error.message;
+
+        status.style.color = "red";
+
+    }
+
+
+    button.disabled = false;
+
+    button.innerHTML =
+    "🙏 संदेश भेजें";
+
 }
+
 </script>
 
-</body>
-</html>
 </body>
 </html>
