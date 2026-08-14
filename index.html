@@ -3,26 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#8d1807">
+<meta name="theme-color" content="#7b1606">
 
-<title>गणपति बप्पा मोरया | Shree Amcha Ganpati Mandal</title>
+<title>Ganpati Bappa Morya 🙏</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap');
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-}
-
-:root{
-    --red:#941d08;
-    --dark-red:#601106;
-    --gold:#d5a23b;
-    --light-gold:#ffe8a6;
-    --cream:#fffaf0;
-    --text:#66301f;
 }
 
 html{
@@ -31,27 +20,30 @@ html{
 
 body{
     min-height:100vh;
-    font-family:"Noto Sans Devanagari",sans-serif;
-    color:var(--text);
+    overflow-x:hidden;
+    font-family:
+        "Noto Sans Devanagari",
+        Arial,
+        sans-serif;
+
+    color:#5d2918;
 
     background:
-        radial-gradient(
-            circle at 10% 10%,
-            rgba(255,255,255,.8),
-            transparent 25%
-        ),
-        radial-gradient(
-            circle at 90% 80%,
-            rgba(255,216,116,.45),
-            transparent 28%
-        ),
+        radial-gradient(circle at 15% 10%,
+            rgba(255,255,255,.9),
+            transparent 25%),
+        radial-gradient(circle at 85% 85%,
+            rgba(255,207,75,.5),
+            transparent 30%),
         linear-gradient(
             135deg,
-            #fff2c8,
-            #f5c65b 52%,
-            #8d1807
+            #fff4c9,
+            #f6c65b 50%,
+            #7b1606
         );
 }
+
+/* MAIN */
 
 .page{
     width:100%;
@@ -63,31 +55,39 @@ body{
 .card{
     position:relative;
     overflow:hidden;
+
     background:#fffdf7;
+
     border-radius:30px;
-    border:1px solid rgba(158,101,23,.35);
+
     box-shadow:
-        0 25px 70px rgba(65,17,3,.35);
+        0 25px 70px rgba(70,15,0,.35);
 }
 
-/* Decorative */
+/* DECORATION */
 
-.card::before{
+.card:before{
     content:"✦";
     position:absolute;
+
     top:-35px;
-    left:-10px;
+    left:-15px;
+
     font-size:120px;
-    color:rgba(207,151,42,.10);
+
+    color:rgba(206,150,35,.12);
 }
 
-.card::after{
+.card:after{
     content:"✦";
     position:absolute;
-    right:-5px;
+
+    right:-15px;
     bottom:-45px;
+
     font-size:130px;
-    color:rgba(207,151,42,.10);
+
+    color:rgba(206,150,35,.12);
 }
 
 /* HEADER */
@@ -95,56 +95,76 @@ body{
 .header{
     position:relative;
     z-index:2;
+
     text-align:center;
-    padding:35px 18px 28px;
+
+    padding:34px 18px 27px;
 
     background:
         linear-gradient(
             180deg,
-            #fffdf4,
-            #fff0c2
+            #fffef6,
+            #ffefbf
         );
 }
 
 .mantra{
-    font-size:14px;
+    color:#a26a20;
+
+    font-size:13px;
     font-weight:800;
+
     letter-spacing:2px;
-    color:#a46c20;
 }
 
 .om{
     margin-top:5px;
-    font-size:50px;
-    color:var(--red);
-    font-family:serif;
+
+    font-size:52px;
+
+    color:#8d1908;
 }
 
-.main-title{
-    margin-top:2px;
-    font-family:"DM Serif Display",serif;
+.title{
+    color:#8d1908;
+
+    font-family:Georgia,serif;
+
     font-size:43px;
-    line-height:1.12;
-    color:var(--red);
+
+    line-height:1.15;
+
+    font-weight:900;
 }
 
-.sub-title{
-    margin-top:12px;
+.subtitle{
+    margin-top:10px;
+
+    color:#985526;
+
     font-size:16px;
-    color:#9b5b28;
+
     line-height:1.7;
 }
 
 .mandal{
     display:inline-block;
-    margin-top:18px;
+
+    margin-top:17px;
+
     padding:9px 18px;
-    border-radius:100px;
-    border:1px solid #d8b15d;
-    background:rgba(255,255,255,.65);
-    color:var(--red);
-    font-weight:800;
+
+    border:1px solid #d5aa52;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.7);
+
+    color:#8d1908;
+
     font-size:14px;
+
+    font-weight:800;
 }
 
 /* DIVIDER */
@@ -152,22 +172,29 @@ body{
 .divider{
     position:relative;
     z-index:2;
+
     display:flex;
-    align-items:center;
+
     justify-content:center;
-    gap:10px;
+    align-items:center;
+
+    gap:11px;
+
     padding:2px 20px 12px;
-    background:#fff0c2;
+
+    background:#ffefbf;
 }
 
 .divider span{
     width:75px;
     height:1px;
-    background:#d3ad59;
+
+    background:#d3ac59;
 }
 
 .divider b{
-    color:#c58b24;
+    color:#c68d25;
+
     font-size:19px;
 }
 
@@ -176,291 +203,219 @@ body{
 .video-section{
     position:relative;
     z-index:2;
-    padding:15px;
+
+    padding:14px;
+
     background:#fff5d9;
 }
 
 .video-box{
-    width:100%;
+    position:relative;
+
     overflow:hidden;
+
     border-radius:23px;
-    background:#210802;
-    box-shadow:0 12px 32px rgba(70,20,3,.20);
+
+    background:#190603;
+
+    box-shadow:
+        0 13px 32px rgba(60,15,0,.22);
 }
 
 .video-box video{
     display:block;
+
     width:100%;
-    max-height:460px;
+
+    max-height:470px;
+
     object-fit:cover;
 }
 
-/* INTRO */
+/* CONTENT */
 
 .content{
     position:relative;
     z-index:2;
-    padding:28px 18px 30px;
+
+    padding:28px 18px 32px;
 }
 
 .intro{
     text-align:center;
+
     max-width:650px;
+
     margin:auto;
 }
 
-.ganesh-icon{
-    font-size:42px;
+.ganesh{
+    font-size:43px;
 }
 
 .intro h2{
     margin-top:7px;
-    color:var(--red);
-    font-size:28px;
+
+    color:#8d1908;
+
+    font-size:29px;
 }
 
 .intro p{
     margin-top:13px;
+
     font-size:16px;
+
     line-height:2;
 }
 
 .highlight{
-    color:var(--red);
-    font-weight:800;
+    color:#8d1908;
+
+    font-weight:900;
 }
 
-/* EVENT */
+/* DETAILS */
 
 .event{
     margin-top:27px;
+
     padding:22px 15px;
+
+    border:1px solid #dfbd68;
+
     border-radius:24px;
-    border:1px solid #dfbf6c;
+
     background:
         linear-gradient(
             145deg,
             #fffdf7,
-            #fff1c8
+            #fff0c6
         );
 }
 
 .event-title{
     text-align:center;
-    color:var(--red);
-    font-size:21px;
-    font-weight:800;
+
     margin-bottom:17px;
+
+    color:#8d1908;
+
+    font-size:21px;
+
+    font-weight:900;
 }
 
 .details{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:
+        repeat(3,1fr);
+
     gap:10px;
 }
 
 .detail{
     text-align:center;
+
     padding:16px 7px;
+
     border-radius:17px;
-    background:rgba(255,255,255,.72);
-    border:1px solid rgba(213,174,81,.55);
+
+    border:1px solid #e2c57b;
+
+    background:
+        rgba(255,255,255,.75);
 }
 
-.detail-icon{
-    font-size:27px;
+.icon{
+    font-size:28px;
 }
 
-.detail-label{
+.label{
     margin-top:5px;
-    color:#a16329;
+
+    color:#a0632a;
+
     font-size:13px;
-    font-weight:700;
-}
 
-.detail-value{
-    margin-top:5px;
-    color:var(--dark-red);
-    font-size:15px;
     font-weight:800;
 }
 
-/* ATTENDANCE */
+.value{
+    margin-top:5px;
 
-.attendance{
-    margin-top:27px;
-    padding:28px 16px 30px;
-    text-align:center;
-    border-radius:27px;
-    border:1px solid #dfbd65;
+    color:#5f1608;
 
-    background:
-        linear-gradient(
-            145deg,
-            #fffdf6,
-            #fff0c5
-        );
-}
-
-.mail-icon{
-    font-size:43px;
-}
-
-.attendance h2{
-    margin-top:7px;
-    color:var(--red);
-    font-size:29px;
-}
-
-.attendance-sub{
-    margin-top:9px;
-    color:#805039;
     font-size:15px;
+
+    font-weight:900;
+}
+
+/* START BUTTON AREA */
+
+.start-area{
+    position:relative;
+    z-index:5;
+
+    text-align:center;
+
+    padding:28px 15px 10px;
+}
+
+.start-text{
+    color:#7a4126;
+
+    font-size:15px;
+
     line-height:1.7;
 }
 
-/* NAME */
+.start-button{
+    position:relative;
 
-.name-area{
-    max-width:520px;
-    margin:20px auto 14px;
-    text-align:left;
-}
+    margin-top:16px;
 
-.name-area label{
-    display:block;
-    margin-bottom:7px;
-    color:#632516;
-    font-size:15px;
-    font-weight:800;
-}
+    padding:16px 30px;
 
-.name-area input{
-    width:100%;
-    padding:15px 17px;
-    border-radius:16px;
-    border:1px solid #d5b565;
-    outline:none;
+    border:none;
 
-    background:#fff;
+    border-radius:50px;
 
-    color:#492014;
-    font-family:inherit;
-    font-size:17px;
-
-    transition:.2s;
-}
-
-.name-area input:focus{
-    border-color:var(--red);
-    box-shadow:
-        0 0 0 4px rgba(148,29,8,.08);
-}
-
-.name-area input::placeholder{
-    color:#a99386;
-}
-
-/* BUTTONS */
-
-.buttons{
-    max-width:520px;
-    margin:auto;
-    display:grid;
-    gap:12px;
-}
-
-.btn{
-    width:100%;
-    padding:16px 14px;
-    border-radius:17px;
-
-    font-family:inherit;
-    font-size:18px;
-    font-weight:800;
-
-    cursor:pointer;
-    transition:
-        transform .15s ease,
-        box-shadow .15s ease,
-        opacity .15s ease;
-}
-
-.btn:active{
-    transform:scale(.98);
-}
-
-.btn:disabled{
-    opacity:.6;
-    cursor:not-allowed;
-}
-
-.yes{
-    border:0;
-    color:#fff;
+    color:white;
 
     background:
         linear-gradient(
             135deg,
-            #a9270b,
-            #7e1505
+            #a92508,
+            #721305
         );
 
+    font-family:inherit;
+
+    font-size:18px;
+
+    font-weight:900;
+
+    cursor:pointer;
+
     box-shadow:
-        0 10px 24px rgba(126,21,5,.22);
+        0 10px 28px rgba(117,19,5,.28);
+
+    transition:
+        transform .2s,
+        box-shadow .2s;
 }
 
-.no{
-    color:#773521;
-    background:#fff;
-    border:1px solid #d9bb75;
+.start-button:hover{
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 14px 32px rgba(117,19,5,.35);
 }
 
-/* STATUS */
-
-.status{
-    display:none;
-    max-width:520px;
-    margin:17px auto 0;
-    padding:17px 14px;
-
-    border-radius:18px;
-    border:1px solid #dfbd68;
-
-    background:#fff8df;
-
-    color:var(--red);
-    font-weight:800;
-    font-size:14px;
-    line-height:1.7;
-
-    animation:statusIn .3s ease;
-}
-
-.status.show{
-    display:block;
-}
-
-.status.success{
-    background:#fff8df;
-    color:#7c310f;
-}
-
-.status.error{
-    background:#fff4e9;
-    color:#8d1807;
-}
-
-@keyframes statusIn{
-    from{
-        opacity:0;
-        transform:translateY(8px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+.start-button:active{
+    transform:scale(.96);
 }
 
 /* FOOTER */
@@ -468,33 +423,117 @@ body{
 .footer{
     position:relative;
     z-index:2;
+
     text-align:center;
+
     padding:28px 15px 32px;
 
     background:
         linear-gradient(
             180deg,
-            #fff0bc,
-            #ffe39a
+            #fff0bd,
+            #ffe197
         );
 }
 
 .footer-title{
-    color:var(--red);
+    color:#8d1908;
+
     font-size:24px;
+
     font-weight:900;
 }
 
 .footer-sub{
     margin-top:7px;
-    color:#86502c;
+
+    color:#80502d;
+
     font-size:15px;
 }
 
 .footer-mandal{
-    margin-top:7px;
-    color:#7a4324;
-    font-size:15px;
+    margin-top:6px;
+
+    color:#774225;
+
+    font-size:14px;
+}
+
+/* FIREWORK CANVAS */
+
+#fireworks{
+    position:fixed;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    pointer-events:none;
+
+    z-index:9999;
+}
+
+/* BIG MESSAGE */
+
+#celebration{
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    pointer-events:none;
+
+    opacity:0;
+
+    z-index:10000;
+
+    transition:opacity .4s;
+}
+
+#celebration.show{
+    opacity:1;
+}
+
+.celebration-box{
+    text-align:center;
+
+    padding:30px;
+
+    color:white;
+
+    text-shadow:
+        0 3px 15px #000;
+
+    transform:scale(.7);
+
+    transition:
+        transform .6s;
+}
+
+#celebration.show
+.celebration-box{
+    transform:scale(1);
+}
+
+.celebration-box .big{
+    font-size:42px;
+
+    font-weight:900;
+}
+
+.celebration-box .small{
+    margin-top:8px;
+
+    font-size:20px;
+
+    font-weight:700;
 }
 
 /* MOBILE */
@@ -502,22 +541,22 @@ body{
 @media(max-width:600px){
 
     .page{
-        padding:6px;
+        padding:5px;
     }
 
     .card{
-        border-radius:23px;
+        border-radius:24px;
     }
 
     .header{
         padding:29px 13px 23px;
     }
 
-    .main-title{
+    .title{
         font-size:34px;
     }
 
-    .sub-title{
+    .subtitle{
         font-size:14px;
     }
 
@@ -526,35 +565,31 @@ body{
     }
 
     .content{
-        padding:23px 13px 27px;
+        padding:23px 13px 28px;
     }
 
     .intro h2{
-        font-size:25px;
+        font-size:26px;
     }
 
     .intro p{
         font-size:15px;
-        line-height:1.9;
     }
 
     .details{
         grid-template-columns:1fr;
     }
 
-    .detail{
-        padding:14px;
+    .start-button{
+        width:100%;
+        max-width:400px;
     }
 
-    .attendance{
-        padding:25px 13px 27px;
+    .celebration-box .big{
+        font-size:31px;
     }
 
-    .attendance h2{
-        font-size:26px;
-    }
-
-    .btn{
+    .celebration-box .small{
         font-size:17px;
     }
 }
@@ -563,9 +598,34 @@ body{
 
 <body>
 
+<!-- FIREWORK CANVAS -->
+
+<canvas id="fireworks"></canvas>
+
+
+<!-- CELEBRATION MESSAGE -->
+
+<div id="celebration">
+
+    <div class="celebration-box">
+
+        <div class="big">
+            🎆 गणपति बप्पा मोरया! 🙏
+        </div>
+
+        <div class="small">
+            मंगलमूर्ति मोरया 🌺
+        </div>
+
+    </div>
+
+</div>
+
+
 <div class="page">
 
 <div class="card">
+
 
 <!-- HEADER -->
 
@@ -575,14 +635,16 @@ body{
 ॥ श्री गणेशाय नमः ॥
 </div>
 
-<div class="om">ॐ</div>
+<div class="om">
+ॐ
+</div>
 
-<h1 class="main-title">
+<h1 class="title">
 गणपति बप्पा मोरया!
 </h1>
 
-<p class="sub-title">
-शुभ आगमन • मंगलमय उत्सव • आपका हार्दिक स्वागत
+<p class="subtitle">
+शुभ आगमन • मंगलमय उत्सव • सादर आमंत्रण
 </p>
 
 <div class="mandal">
@@ -595,9 +657,13 @@ body{
 <!-- DIVIDER -->
 
 <div class="divider">
+
 <span></span>
+
 <b>✦</b>
+
 <span></span>
+
 </div>
 
 
@@ -608,16 +674,18 @@ body{
 <div class="video-box">
 
 <video
-controls
+id="ganpatiVideo"
+autoplay
+muted
 playsinline
 loop
-preload="metadata">
+preload="auto">
 
 <source
 src="ganpati_video.mp4"
 type="video/mp4">
 
-आपका ब्र
+आपका browser video support नहीं करता।
 
 </video>
 
@@ -631,11 +699,9 @@ type="video/mp4">
 <main class="content">
 
 
-<!-- INTRO -->
-
 <section class="intro">
 
-<div class="ganesh-icon">
+<div class="ganesh">
 🙏
 </div>
 
@@ -645,7 +711,9 @@ type="video/mp4">
 
 <p>
 विघ्नहर्ता
-<span class="highlight">श्री गणेश जी</span>
+<span class="highlight">
+श्री गणेश जी
+</span>
 के शुभ आगमन के पावन अवसर पर
 </p>
 
@@ -659,7 +727,8 @@ Shree Amcha Ganpati Mandal
 
 <p>
 आइए बप्पा के दर्शन करें और
-उनका आशीर्वाद प्राप्त करें। 🌼
+उनका आशीर्वाद प्राप्त कर इस शुभ अवसर को
+मिलकर यादगार बनाएं। 🌼
 </p>
 
 </section>
@@ -678,13 +747,15 @@ Shree Amcha Ganpati Mandal
 
 <div class="detail">
 
-<div class="detail-icon">📅</div>
+<div class="icon">
+📅
+</div>
 
-<div class="detail-label">
+<div class="label">
 दिनांक
 </div>
 
-<div class="detail-value">
+<div class="value">
 14 September 2026
 </div>
 
@@ -693,13 +764,15 @@ Shree Amcha Ganpati Mandal
 
 <div class="detail">
 
-<div class="detail-icon">⏰</div>
+<div class="icon">
+⏰
+</div>
 
-<div class="detail-label">
+<div class="label">
 समय
 </div>
 
-<div class="detail-value">
+<div class="value">
 11:00 AM
 </div>
 
@@ -708,14 +781,16 @@ Shree Amcha Ganpati Mandal
 
 <div class="detail">
 
-<div class="detail-icon">📍</div>
+<div class="icon">
+📍
+</div>
 
-<div class="detail-label">
+<div class="label">
 स्थान
 </div>
 
-<div class="detail-value">
-Lakhi Bhawn
+<div class="value">
+Lakh Bhawn
 </div>
 
 </div>
@@ -726,69 +801,22 @@ Lakhi Bhawn
 </section>
 
 
-<!-- ATTENDANCE -->
+<!-- START -->
 
-<section class="attendance">
+<section class="start-area">
 
-<div class="mail-icon">
-💌
-</div>
-
-<h2>
-आप आएंगे ना?
-</h2>
-
-<p class="attendance-sub">
-बप्पा के दर्शन के लिए अपनी उपस्थिति दर्ज करें।
+<p class="start-text">
+✨ बप्पा के आगमन का शुभारंभ करने के लिए नीचे स्पर्श करें ✨
 </p>
 
-
-<div class="name-area">
-
-<label for="guestName">
-आपका नाम
-</label>
-
-<input
-id="guestName"
-type="text"
-maxlength="80"
-autocomplete="name"
-placeholder="अपना नाम लिखें">
-
-</div>
-
-
-<div class="buttons">
-
 <button
-id="yesBtn"
-class="btn yes"
-type="button"
-onclick="sendAttendance('yes')">
+id="startButton"
+class="start-button"
+type="button">
 
-🙏 मैं आऊँगा / आऊँगी
+✨ शुभारंभ करें ✨
 
 </button>
-
-
-<button
-id="noBtn"
-class="btn no"
-type="button"
-onclick="sendAttendance('no')">
-
-🙏 इस बार नहीं आ पाऊँगा / पाऊँगी
-
-</button>
-
-</div>
-
-
-<div
-id="status"
-class="status">
-</div>
 
 </section>
 
@@ -822,188 +850,328 @@ Shree Amcha Ganpati Mandal
 
 <script>
 
-async function sendAttendance(type){
+/* ==========================================
+   VIDEO AUTOPLAY
+========================================== */
 
-    const nameInput =
-        document.getElementById("guestName");
-
-    const status =
-        document.getElementById("status");
-
-    const yesBtn =
-        document.getElementById("yesBtn");
-
-    const noBtn =
-        document.getElementById("noBtn");
+const video =
+document.getElementById("ganpatiVideo");
 
 
-    const name =
-        nameInput.value.trim();
+video.muted = true;
+
+const playVideo = () => {
+
+    video.play()
+    .catch(() => {
+        /* Mobile browser may require
+           user interaction */
+    });
+
+};
+
+window.addEventListener(
+    "load",
+    playVideo
+);
+
+document.addEventListener(
+    "visibilitychange",
+    () => {
+
+        if(!document.hidden){
+            playVideo();
+        }
+
+    }
+);
 
 
-    /* NAME CHECK */
+/* ==========================================
+   FIREWORK SYSTEM
+========================================== */
 
-    if(!name){
+const canvas =
+document.getElementById("fireworks");
 
-        status.innerHTML =
-            "🙏 कृपया पहले अपना नाम लिखें।";
+const ctx =
+canvas.getContext("2d");
 
-        status.className =
-            "status show error";
+let width;
+let height;
 
-        nameInput.focus();
+let fireworks = [];
+let particles = [];
 
-        return;
+let running = false;
+
+
+function resizeCanvas(){
+
+    width =
+        canvas.width =
+        window.innerWidth;
+
+    height =
+        canvas.height =
+        window.innerHeight;
+
+}
+
+
+resizeCanvas();
+
+window.addEventListener(
+    "resize",
+    resizeCanvas
+);
+
+
+/* FIREWORK */
+
+function createFirework(){
+
+    const x =
+        Math.random() *
+        width;
+
+    const y =
+        Math.random() *
+        (height * .55) +
+        50;
+
+    const particleCount = 75;
+
+    for(
+        let i = 0;
+        i < particleCount;
+        i++
+    ){
+
+        const angle =
+            Math.random() *
+            Math.PI *
+            2;
+
+        const speed =
+            Math.random() * 7 + 2;
+
+        particles.push({
+
+            x:x,
+
+            y:y,
+
+            vx:
+                Math.cos(angle) *
+                speed,
+
+            vy:
+                Math.sin(angle) *
+                speed,
+
+            life:100,
+
+            size:
+                Math.random() * 2.5 + 1,
+
+            hue:
+                Math.random() * 360
+
+        });
+
     }
 
-
-    /* DISABLE BUTTONS */
-
-    yesBtn.disabled = true;
-    noBtn.disabled = true;
+}
 
 
-    status.innerHTML =
-        "⏳ आपकी उपस्थिति दर्ज की जा रही है...";
+/* UPDATE */
 
-    status.className =
-        "status show";
+function updateFireworks(){
+
+    ctx.clearRect(
+        0,
+        0,
+        width,
+        height
+    );
 
 
-    const attendance =
-        type === "yes"
-        ? "✅ समारोह में आएँगे"
-        : "❌ इस बार उपस्थित नहीं हो पाएँगे";
+    for(
+        let i = particles.length - 1;
+        i >= 0;
+        i--
+    ){
+
+        const p =
+            particles[i];
 
 
-    try{
+        p.x += p.vx;
 
-        const response =
-            await fetch(
-                "/.netlify/functions/send-telegram",
-                {
-                    method:"POST",
+        p.y += p.vy;
 
-                    headers:{
-                        "Content-Type":
-                            "application/json"
-                    },
+        p.vy += .045;
 
-                    body:JSON.stringify({
+        p.vx *= .985;
 
-                        name:name,
+        p.vy *= .985;
 
-                        phone:"",
+        p.life -= 1.5;
 
-                        message:attendance
 
-                    })
-                }
+        ctx.beginPath();
+
+        ctx.arc(
+            p.x,
+            p.y,
+            p.size,
+            0,
+            Math.PI * 2
+        );
+
+
+        ctx.fillStyle =
+            `hsla(
+                ${p.hue},
+                100%,
+                65%,
+                ${p.life / 100}
+            )`;
+
+        ctx.shadowBlur = 12;
+
+        ctx.shadowColor =
+            ctx.fillStyle;
+
+        ctx.fill();
+
+
+        if(p.life <= 0){
+
+            particles.splice(
+                i,
+                1
             );
-
-
-        const text =
-            await response.text();
-
-
-        let result = null;
-
-
-        try{
-
-            result =
-                JSON.parse(text);
-
-        }catch(e){
-
-            result = null;
 
         }
 
-
-        /*
-         * IMPORTANT:
-         * Telegram का technical error
-         * user को नहीं दिखाएँगे।
-         */
+    }
 
 
-        if(
-            !response.ok ||
-            !result ||
-            !result.ok
+    if(
+        running &&
+        Math.random() < .08
+    ){
+
+        createFirework();
+
+    }
+
+
+    if(
+        running ||
+        particles.length > 0
+    ){
+
+        requestAnimationFrame(
+            updateFireworks
+        );
+
+    }
+
+}
+
+
+/* ==========================================
+   CELEBRATION
+========================================== */
+
+const startButton =
+document.getElementById(
+    "startButton"
+);
+
+const celebration =
+document.getElementById(
+    "celebration"
+);
+
+
+startButton.addEventListener(
+    "click",
+    () => {
+
+        /* Video sound remains controlled
+           by browser policy */
+
+        playVideo();
+
+
+        /* Start fireworks */
+
+        running = true;
+
+        updateFireworks();
+
+
+        /* Initial fireworks */
+
+        for(
+            let i = 0;
+            i < 5;
+            i++
         ){
 
-            throw new Error(
-                "send_failed"
+            setTimeout(
+                createFirework,
+                i * 350
             );
 
         }
 
 
-        /* SUCCESS */
+        /* Show message */
 
-        if(type === "yes"){
-
-            status.innerHTML =
-                "🌺 धन्यवाद " +
-                escapeHtml(name) +
-                "!<br>" +
-                "आपकी उपस्थिति दर्ज हो गई।<br>" +
-                "🙏 गणपति बप्पा मोरया!";
-
-        }else{
-
-            status.innerHTML =
-                "🙏 धन्यवाद " +
-                escapeHtml(name) +
-                "!<br>" +
-                "आपका जवाब प्राप्त हो गया।<br>" +
-                "🌺 गणपति बप्पा मोरया!";
-
-        }
+        celebration.classList.add(
+            "show"
+        );
 
 
-        status.className =
-            "status show success";
+        /* Button text */
+
+        startButton.innerHTML =
+            "🎆 गणपति बप्पा मोरया! 🙏";
 
 
-    }catch(error){
+        /* Stop continuous fireworks
+           after 7 seconds */
 
-        /*
-         * User को technical Telegram error
-         * नहीं दिखाएँगे।
-         */
+        setTimeout(
+            () => {
 
-        status.innerHTML =
-            "🙏 अभी उपस्थिति दर्ज नहीं हो सकी।<br>" +
-            "कृपया थोड़ी देर बाद दोबारा प्रयास करें।";
+                running = false;
 
-        status.className =
-            "status show error";
+            },
+            7000
+        );
 
-    }finally{
 
-        yesBtn.disabled = false;
-        noBtn.disabled = false;
+        /* Hide big message */
+
+        setTimeout(
+            () => {
+
+                celebration.classList.remove(
+                    "show"
+                );
+
+            },
+            4000
+        );
 
     }
-
-}
-
-
-/* Safe display of name */
-
-function escapeHtml(text){
-
-    const div =
-        document.createElement("div");
-
-    div.textContent = text;
-
-    return div.innerHTML;
-
-}
+);
 
 </script>
 
