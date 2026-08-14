@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#8f1600">
+<meta name="theme-color" content="#8d1807">
 
 <title>गणपति बप्पा मोरया | Shree Amcha Ganpati Mandal</title>
 
@@ -11,115 +11,136 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap');
 
 *{
-    box-sizing:border-box;
     margin:0;
     padding:0;
+    box-sizing:border-box;
 }
 
 :root{
-    --red:#8f1808;
-    --deep:#551006;
-    --gold:#d39a28;
+    --red:#941d08;
+    --dark-red:#601106;
+    --gold:#d5a23b;
+    --light-gold:#ffe8a6;
     --cream:#fffaf0;
-    --paper:#fffdf7;
-    --text:#5b2a19;
+    --text:#66301f;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
     min-height:100vh;
-    background:
-        radial-gradient(circle at 15% 10%,rgba(255,255,255,.8),transparent 24%),
-        radial-gradient(circle at 85% 90%,rgba(255,211,105,.45),transparent 25%),
-        linear-gradient(135deg,#fff2bd,#f8c45a 52%,#8f1808);
+    font-family:"Noto Sans Devanagari",sans-serif;
     color:var(--text);
-    font-family:"Noto Sans Devanagari",Arial,sans-serif;
-}
 
-.page{
-    max-width:760px;
-    margin:auto;
-    padding:14px;
-}
-
-.invitation{
-    position:relative;
-    overflow:hidden;
-    background:var(--paper);
-    border:1px solid rgba(151,92,20,.28);
-    border-radius:30px;
-    box-shadow:0 25px 70px rgba(69,19,4,.35);
-}
-
-/* decorative corners */
-
-.invitation:before,
-.invitation:after{
-    content:"✦";
-    position:absolute;
-    font-size:90px;
-    color:rgba(211,154,40,.12);
-    z-index:0;
-}
-
-.invitation:before{
-    top:-28px;
-    left:-10px;
-}
-
-.invitation:after{
-    bottom:-30px;
-    right:-5px;
-}
-
-/* TOP */
-
-.top{
-    position:relative;
-    z-index:1;
-    text-align:center;
-    padding:34px 20px 26px;
     background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(255,255,255,.8),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(255,216,116,.45),
+            transparent 28%
+        ),
         linear-gradient(
-            180deg,
-            #fffdf0,
-            #fff1c5
+            135deg,
+            #fff2c8,
+            #f5c65b 52%,
+            #8d1807
         );
 }
 
-.small-line{
-    font-size:13px;
+.page{
+    width:100%;
+    max-width:780px;
+    margin:auto;
+    padding:8px;
+}
+
+.card{
+    position:relative;
+    overflow:hidden;
+    background:#fffdf7;
+    border-radius:30px;
+    border:1px solid rgba(158,101,23,.35);
+    box-shadow:
+        0 25px 70px rgba(65,17,3,.35);
+}
+
+/* Decorative */
+
+.card::before{
+    content:"✦";
+    position:absolute;
+    top:-35px;
+    left:-10px;
+    font-size:120px;
+    color:rgba(207,151,42,.10);
+}
+
+.card::after{
+    content:"✦";
+    position:absolute;
+    right:-5px;
+    bottom:-45px;
+    font-size:130px;
+    color:rgba(207,151,42,.10);
+}
+
+/* HEADER */
+
+.header{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    padding:35px 18px 28px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fffdf4,
+            #fff0c2
+        );
+}
+
+.mantra{
+    font-size:14px;
+    font-weight:800;
     letter-spacing:2px;
-    color:#9b6920;
-    font-weight:700;
+    color:#a46c20;
 }
 
 .om{
-    font-size:48px;
+    margin-top:5px;
+    font-size:50px;
     color:var(--red);
-    margin:5px 0;
+    font-family:serif;
 }
 
-.title{
+.main-title{
+    margin-top:2px;
     font-family:"DM Serif Display",serif;
-    font-size:40px;
-    line-height:1.15;
+    font-size:43px;
+    line-height:1.12;
     color:var(--red);
 }
 
-.subtitle{
-    margin-top:10px;
-    font-size:17px;
-    color:#a05a22;
+.sub-title{
+    margin-top:12px;
+    font-size:16px;
+    color:#9b5b28;
+    line-height:1.7;
 }
 
 .mandal{
-    margin:18px auto 0;
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
+    display:inline-block;
+    margin-top:18px;
     padding:9px 18px;
-    border:1px solid #d7ae58;
-    border-radius:999px;
+    border-radius:100px;
+    border:1px solid #d8b15d;
     background:rgba(255,255,255,.65);
     color:var(--red);
     font-weight:800;
@@ -129,71 +150,79 @@ body{
 /* DIVIDER */
 
 .divider{
+    position:relative;
+    z-index:2;
     display:flex;
     align-items:center;
-    gap:10px;
     justify-content:center;
-    color:var(--gold);
-    margin:0 25px;
+    gap:10px;
+    padding:2px 20px 12px;
+    background:#fff0c2;
 }
 
 .divider span{
-    width:70px;
+    width:75px;
     height:1px;
-    background:#d7b05c;
+    background:#d3ad59;
 }
 
 .divider b{
-    font-size:18px;
+    color:#c58b24;
+    font-size:19px;
 }
 
-/* MEDIA */
+/* VIDEO */
 
-.media{
+.video-section{
     position:relative;
-    z-index:1;
-    padding:14px;
-    background:#fff8df;
+    z-index:2;
+    padding:15px;
+    background:#fff5d9;
 }
 
-.media video{
+.video-box{
+    width:100%;
+    overflow:hidden;
+    border-radius:23px;
+    background:#210802;
+    box-shadow:0 12px 32px rgba(70,20,3,.20);
+}
+
+.video-box video{
     display:block;
     width:100%;
-    max-height:440px;
+    max-height:460px;
     object-fit:cover;
-    border-radius:22px;
-    background:#1a0803;
-    box-shadow:0 12px 30px rgba(60,20,0,.18);
 }
 
-/* CONTENT */
+/* INTRO */
 
 .content{
     position:relative;
-    z-index:1;
-    padding:26px 20px 30px;
+    z-index:2;
+    padding:28px 18px 30px;
 }
 
-.welcome{
+.intro{
     text-align:center;
-    max-width:620px;
+    max-width:650px;
     margin:auto;
 }
 
-.welcome .namaste{
-    font-size:31px;
+.ganesh-icon{
+    font-size:42px;
 }
 
-.welcome h2{
+.intro h2{
     margin-top:7px;
     color:var(--red);
-    font-size:25px;
+    font-size:28px;
 }
 
-.welcome p{
-    margin-top:12px;
+.intro p{
+    margin-top:13px;
     font-size:16px;
-    line-height:1.9;
+    line-height:2;
 }
 
 .highlight{
@@ -204,20 +233,24 @@ body{
 /* EVENT */
 
 .event{
-    margin-top:25px;
-    padding:20px;
-    border-radius:22px;
+    margin-top:27px;
+    padding:22px 15px;
+    border-radius:24px;
+    border:1px solid #dfbf6c;
     background:
-        linear-gradient(145deg,#fffaf0,#fff2ca);
-    border:1px solid #e2c26e;
+        linear-gradient(
+            145deg,
+            #fffdf7,
+            #fff1c8
+        );
 }
 
 .event-title{
     text-align:center;
     color:var(--red);
-    font-size:20px;
+    font-size:21px;
     font-weight:800;
-    margin-bottom:16px;
+    margin-bottom:17px;
 }
 
 .details{
@@ -228,26 +261,26 @@ body{
 
 .detail{
     text-align:center;
-    padding:15px 7px;
+    padding:16px 7px;
     border-radius:17px;
     background:rgba(255,255,255,.72);
-    border:1px solid rgba(207,167,77,.5);
+    border:1px solid rgba(213,174,81,.55);
 }
 
 .detail-icon{
-    font-size:25px;
+    font-size:27px;
 }
 
 .detail-label{
     margin-top:5px;
-    color:#9b5c20;
+    color:#a16329;
     font-size:13px;
     font-weight:700;
 }
 
 .detail-value{
-    margin-top:4px;
-    color:var(--deep);
+    margin-top:5px;
+    color:var(--dark-red);
     font-size:15px;
     font-weight:800;
 }
@@ -255,133 +288,213 @@ body{
 /* ATTENDANCE */
 
 .attendance{
-    margin-top:25px;
-    padding:25px 18px;
+    margin-top:27px;
+    padding:28px 16px 30px;
     text-align:center;
-    border-radius:24px;
+    border-radius:27px;
+    border:1px solid #dfbd65;
+
     background:
         linear-gradient(
             145deg,
             #fffdf6,
-            #fff3ce
+            #fff0c5
         );
-    border:1px solid #dfbc60;
 }
 
-.attendance-icon{
-    font-size:37px;
+.mail-icon{
+    font-size:43px;
 }
 
 .attendance h2{
-    margin-top:5px;
+    margin-top:7px;
     color:var(--red);
-    font-size:25px;
+    font-size:29px;
 }
 
-.attendance p{
-    margin-top:8px;
+.attendance-sub{
+    margin-top:9px;
+    color:#805039;
     font-size:15px;
-    color:#76503b;
+    line-height:1.7;
 }
 
-.name-box{
-    margin:18px auto 12px;
-    max-width:500px;
+/* NAME */
+
+.name-area{
+    max-width:520px;
+    margin:20px auto 14px;
     text-align:left;
 }
 
-.name-box label{
+.name-area label{
     display:block;
-    margin-bottom:6px;
-    font-size:14px;
+    margin-bottom:7px;
+    color:#632516;
+    font-size:15px;
     font-weight:800;
 }
 
-.name-box input{
+.name-area input{
     width:100%;
-    padding:14px 16px;
-    border:1px solid #d5b466;
-    border-radius:14px;
+    padding:15px 17px;
+    border-radius:16px;
+    border:1px solid #d5b565;
     outline:none;
-    font-size:16px;
-    background:white;
+
+    background:#fff;
+
+    color:#492014;
+    font-family:inherit;
+    font-size:17px;
+
+    transition:.2s;
 }
 
-.name-box input:focus{
+.name-area input:focus{
     border-color:var(--red);
-    box-shadow:0 0 0 3px rgba(143,24,8,.08);
+    box-shadow:
+        0 0 0 4px rgba(148,29,8,.08);
 }
+
+.name-area input::placeholder{
+    color:#a99386;
+}
+
+/* BUTTONS */
 
 .buttons{
-    max-width:500px;
+    max-width:520px;
     margin:auto;
     display:grid;
-    gap:10px;
+    gap:12px;
 }
 
 .btn{
-    border:none;
-    border-radius:14px;
-    padding:15px;
-    font-size:17px;
+    width:100%;
+    padding:16px 14px;
+    border-radius:17px;
+
     font-family:inherit;
+    font-size:18px;
     font-weight:800;
+
     cursor:pointer;
-    transition:.2s;
+    transition:
+        transform .15s ease,
+        box-shadow .15s ease,
+        opacity .15s ease;
 }
 
 .btn:active{
     transform:scale(.98);
 }
 
+.btn:disabled{
+    opacity:.6;
+    cursor:not-allowed;
+}
+
 .yes{
-    background:var(--red);
-    color:white;
-    box-shadow:0 8px 18px rgba(143,24,8,.2);
+    border:0;
+    color:#fff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #a9270b,
+            #7e1505
+        );
+
+    box-shadow:
+        0 10px 24px rgba(126,21,5,.22);
 }
 
 .no{
+    color:#773521;
     background:#fff;
-    color:#7b3824;
-    border:1px solid #d9bb78;
+    border:1px solid #d9bb75;
 }
 
-.btn:disabled{
-    opacity:.6;
-}
+/* STATUS */
 
 .status{
-    min-height:25px;
-    margin-top:14px;
+    display:none;
+    max-width:520px;
+    margin:17px auto 0;
+    padding:17px 14px;
+
+    border-radius:18px;
+    border:1px solid #dfbd68;
+
+    background:#fff8df;
+
+    color:var(--red);
     font-weight:800;
     font-size:14px;
+    line-height:1.7;
+
+    animation:statusIn .3s ease;
+}
+
+.status.show{
+    display:block;
+}
+
+.status.success{
+    background:#fff8df;
+    color:#7c310f;
+}
+
+.status.error{
+    background:#fff4e9;
+    color:#8d1807;
+}
+
+@keyframes statusIn{
+    from{
+        opacity:0;
+        transform:translateY(8px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 /* FOOTER */
 
 .footer{
     position:relative;
-    z-index:1;
-    padding:25px 15px 28px;
+    z-index:2;
     text-align:center;
+    padding:28px 15px 32px;
+
     background:
         linear-gradient(
             180deg,
-            #fff1c4,
-            #ffe6a0
+            #fff0bc,
+            #ffe39a
         );
 }
 
-.footer-main{
+.footer-title{
     color:var(--red);
-    font-size:22px;
+    font-size:24px;
     font-weight:900;
 }
 
-.footer-small{
+.footer-sub{
     margin-top:7px;
-    color:#87502a;
-    font-size:14px;
+    color:#86502c;
+    font-size:15px;
+}
+
+.footer-mandal{
+    margin-top:7px;
+    color:#7a4324;
+    font-size:15px;
 }
 
 /* MOBILE */
@@ -389,65 +502,86 @@ body{
 @media(max-width:600px){
 
     .page{
-        padding:7px;
+        padding:6px;
     }
 
-    .invitation{
+    .card{
         border-radius:23px;
     }
 
-    .top{
-        padding:28px 14px 22px;
+    .header{
+        padding:29px 13px 23px;
     }
 
-    .title{
-        font-size:32px;
+    .main-title{
+        font-size:34px;
     }
 
-    .subtitle{
-        font-size:15px;
+    .sub-title{
+        font-size:14px;
+    }
+
+    .mandal{
+        font-size:13px;
     }
 
     .content{
-        padding:22px 14px 25px;
+        padding:23px 13px 27px;
+    }
+
+    .intro h2{
+        font-size:25px;
+    }
+
+    .intro p{
+        font-size:15px;
+        line-height:1.9;
     }
 
     .details{
         grid-template-columns:1fr;
     }
 
-    .welcome p{
-        font-size:15px;
+    .detail{
+        padding:14px;
+    }
+
+    .attendance{
+        padding:25px 13px 27px;
+    }
+
+    .attendance h2{
+        font-size:26px;
+    }
+
+    .btn{
+        font-size:17px;
     }
 }
 </style>
 </head>
 
-
 <body>
 
 <div class="page">
 
-<div class="invitation">
-
+<div class="card">
 
 <!-- HEADER -->
 
-<header class="top">
+<header class="header">
 
-<div class="small-line">
+<div class="mantra">
 ॥ श्री गणेशाय नमः ॥
 </div>
 
-<div class="om">
-ॐ
-</div>
+<div class="om">ॐ</div>
 
-<h1 class="title">
+<h1 class="main-title">
 गणपति बप्पा मोरया!
 </h1>
 
-<p class="subtitle">
+<p class="sub-title">
 शुभ आगमन • मंगलमय उत्सव • आपका हार्दिक स्वागत
 </p>
 
@@ -458,6 +592,8 @@ body{
 </header>
 
 
+<!-- DIVIDER -->
+
 <div class="divider">
 <span></span>
 <b>✦</b>
@@ -467,7 +603,9 @@ body{
 
 <!-- VIDEO -->
 
-<section class="media">
+<section class="video-section">
+
+<div class="video-box">
 
 <video
 controls
@@ -483,17 +621,21 @@ type="video/mp4">
 
 </video>
 
+</div>
+
 </section>
 
 
-<!-- MAIN CONTENT -->
+<!-- CONTENT -->
 
 <main class="content">
 
 
-<section class="welcome">
+<!-- INTRO -->
 
-<div class="namaste">
+<section class="intro">
+
+<div class="ganesh-icon">
 🙏
 </div>
 
@@ -505,6 +647,9 @@ type="video/mp4">
 विघ्नहर्ता
 <span class="highlight">श्री गणेश जी</span>
 के शुभ आगमन के पावन अवसर पर
+</p>
+
+<p>
 <strong class="highlight">
 Shree Amcha Ganpati Mandal
 </strong>
@@ -513,10 +658,8 @@ Shree Amcha Ganpati Mandal
 </p>
 
 <p>
-आइए बप्पा के दर्शन करें,
-उनका आशीर्वाद प्राप्त करें और
-इस शुभ अवसर को प्रेम एवं भक्ति के साथ
-मिलकर यादगार बनाएं। 🌼
+आइए बप्पा के दर्शन करें और
+उनका आशीर्वाद प्राप्त करें। 🌼
 </p>
 
 </section>
@@ -535,9 +678,7 @@ Shree Amcha Ganpati Mandal
 
 <div class="detail">
 
-<div class="detail-icon">
-📅
-</div>
+<div class="detail-icon">📅</div>
 
 <div class="detail-label">
 दिनांक
@@ -552,9 +693,7 @@ Shree Amcha Ganpati Mandal
 
 <div class="detail">
 
-<div class="detail-icon">
-⏰
-</div>
+<div class="detail-icon">⏰</div>
 
 <div class="detail-label">
 समय
@@ -569,9 +708,7 @@ Shree Amcha Ganpati Mandal
 
 <div class="detail">
 
-<div class="detail-icon">
-📍
-</div>
+<div class="detail-icon">📍</div>
 
 <div class="detail-label">
 स्थान
@@ -593,7 +730,7 @@ Lakh Bhawn
 
 <section class="attendance">
 
-<div class="attendance-icon">
+<div class="mail-icon">
 💌
 </div>
 
@@ -601,12 +738,12 @@ Lakh Bhawn
 आप आएंगे ना?
 </h2>
 
-<p>
+<p class="attendance-sub">
 बप्पा के दर्शन के लिए अपनी उपस्थिति दर्ज करें।
 </p>
 
 
-<div class="name-box">
+<div class="name-area">
 
 <label for="guestName">
 आपका नाम
@@ -615,9 +752,9 @@ Lakh Bhawn
 <input
 id="guestName"
 type="text"
-placeholder="अपना नाम लिखें"
 maxlength="80"
-autocomplete="name">
+autocomplete="name"
+placeholder="अपना नाम लिखें">
 
 </div>
 
@@ -625,8 +762,8 @@ autocomplete="name">
 <div class="buttons">
 
 <button
-class="btn yes"
 id="yesBtn"
+class="btn yes"
 type="button"
 onclick="sendAttendance('yes')">
 
@@ -636,8 +773,8 @@ onclick="sendAttendance('yes')">
 
 
 <button
-class="btn no"
 id="noBtn"
+class="btn no"
 type="button"
 onclick="sendAttendance('no')">
 
@@ -663,15 +800,15 @@ class="status">
 
 <footer class="footer">
 
-<div class="footer-main">
+<div class="footer-title">
 🌺 गणपति बप्पा मोरया 🌺
 </div>
 
-<div class="footer-small">
+<div class="footer-sub">
 मंगलमूर्ति मोरया 🙏
 </div>
 
-<div class="footer-small">
+<div class="footer-mandal">
 Shree Amcha Ganpati Mandal
 </div>
 
@@ -679,6 +816,7 @@ Shree Amcha Ganpati Mandal
 
 
 </div>
+
 </div>
 
 
@@ -686,52 +824,56 @@ Shree Amcha Ganpati Mandal
 
 async function sendAttendance(type){
 
-    const name =
-        document
-        .getElementById("guestName")
-        .value
-        .trim();
+    const nameInput =
+        document.getElementById("guestName");
 
     const status =
-        document
-        .getElementById("status");
+        document.getElementById("status");
 
     const yesBtn =
-        document
-        .getElementById("yesBtn");
+        document.getElementById("yesBtn");
 
     const noBtn =
-        document
-        .getElementById("noBtn");
+        document.getElementById("noBtn");
 
+
+    const name =
+        nameInput.value.trim();
+
+
+    /* NAME CHECK */
 
     if(!name){
 
-        status.textContent =
-            "⚠️ पहले अपना नाम लिखें।";
+        status.innerHTML =
+            "🙏 कृपया पहले अपना नाम लिखें।";
 
-        status.style.color =
-            "#b00000";
+        status.className =
+            "status show error";
+
+        nameInput.focus();
 
         return;
     }
 
 
+    /* DISABLE BUTTONS */
+
     yesBtn.disabled = true;
     noBtn.disabled = true;
+
+
+    status.innerHTML =
+        "⏳ आपकी उपस्थिति दर्ज की जा रही है...";
+
+    status.className =
+        "status show";
 
 
     const attendance =
         type === "yes"
         ? "✅ समारोह में आएँगे"
         : "❌ इस बार उपस्थित नहीं हो पाएँगे";
-
-
-    status.textContent =
-        "⏳ आपकी उपस्थिति दर्ज की जा रही है...";
-
-    status.style.color =
-        "#8f1808";
 
 
     try{
@@ -753,8 +895,7 @@ async function sendAttendance(type){
 
                         phone:"",
 
-                        message:
-                            attendance
+                        message:attendance
 
                     })
                 }
@@ -765,7 +906,7 @@ async function sendAttendance(type){
             await response.text();
 
 
-        let result;
+        let result = null;
 
 
         try{
@@ -773,52 +914,73 @@ async function sendAttendance(type){
             result =
                 JSON.parse(text);
 
-        }catch{
+        }catch(e){
 
-            throw new Error(
-                "Server response सही नहीं है।"
-            );
+            result = null;
 
         }
+
+
+        /*
+         * IMPORTANT:
+         * Telegram का technical error
+         * user को नहीं दिखाएँगे।
+         */
 
 
         if(
             !response.ok ||
+            !result ||
             !result.ok
         ){
 
             throw new Error(
-                result.error ||
-                "Telegram message नहीं गया।"
+                "send_failed"
             );
 
         }
 
 
+        /* SUCCESS */
+
         if(type === "yes"){
 
-            status.textContent =
-                "🌺 धन्यवाद! आपकी उपस्थिति दर्ज हो गई। गणपति बप्पा मोरया! 🙏";
+            status.innerHTML =
+                "🌺 धन्यवाद " +
+                escapeHtml(name) +
+                "!<br>" +
+                "आपकी उपस्थिति दर्ज हो गई।<br>" +
+                "🙏 गणपति बप्पा मोरया!";
 
         }else{
 
-            status.textContent =
-                "🙏 धन्यवाद! आपका संदेश प्राप्त हो गया। गणपति बप्पा मोरया!";
+            status.innerHTML =
+                "🙏 धन्यवाद " +
+                escapeHtml(name) +
+                "!<br>" +
+                "आपका जवाब प्राप्त हो गया।<br>" +
+                "🌺 गणपति बप्पा मोरया!";
 
         }
 
 
-        status.style.color =
-            "#168000";
+        status.className =
+            "status show success";
 
 
     }catch(error){
 
-        status.textContent =
-            "❌ " + error.message;
+        /*
+         * User को technical Telegram error
+         * नहीं दिखाएँगे।
+         */
 
-        status.style.color =
-            "#b00000";
+        status.innerHTML =
+            "🙏 अभी उपस्थिति दर्ज नहीं हो सकी।<br>" +
+            "कृपया थोड़ी देर बाद दोबारा प्रयास करें।";
+
+        status.className =
+            "status show error";
 
     }finally{
 
@@ -826,6 +988,20 @@ async function sendAttendance(type){
         noBtn.disabled = false;
 
     }
+
+}
+
+
+/* Safe display of name */
+
+function escapeHtml(text){
+
+    const div =
+        document.createElement("div");
+
+    div.textContent = text;
+
+    return div.innerHTML;
 
 }
 
