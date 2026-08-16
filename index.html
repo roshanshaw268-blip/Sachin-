@@ -1,46 +1,162 @@
-<!doctype html>
-<html lang="hi"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<title>Happy Birthday Simmi 🎂</title>
+<title>For Simmi ❤️</title>
 <style>
-*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden}
-body{font-family:system-ui,sans-serif;background:#090014;color:white}
-#app{height:100svh;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 20%,#ff69b433,transparent 28%),radial-gradient(circle at 15% 80%,#7c3aed33,transparent 30%),linear-gradient(145deg,#08000f,#16001f,#05000b)}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden}
+body{background:#020106;color:#fff;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+#app{height:100svh;width:100%;position:relative;overflow:hidden;background:#020106}
 canvas{position:absolute;inset:0;width:100%;height:100%}
-.screen{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:22px;opacity:0;visibility:hidden;transform:scale(1.05);transition:.7s;z-index:3}
-.screen.active{opacity:1;visibility:visible;transform:scale(1)}
-.card{width:min(430px,100%);text-align:center;padding:32px 22px;border:1px solid #ffffff22;border-radius:32px;background:#ffffff0d;backdrop-filter:blur(18px);box-shadow:0 25px 80px #0008}
-.emoji{font-size:62px;animation:float 2.4s ease-in-out infinite}
-h1{margin:10px 0;font-size:clamp(42px,12vw,68px);line-height:1;background:linear-gradient(90deg,#fff,#ff9bd5,#d8b4fe,#fff);background-size:250%;-webkit-background-clip:text;color:transparent;animation:shine 3s linear infinite}
-.subtitle,.message{color:#f5e7ff;line-height:1.7}.message{font-size:18px}.name{color:#f9a8d4;font-weight:800}
-button{border:0;border-radius:999px;padding:15px 24px;font-size:16px;font-weight:700;color:#fff;background:linear-gradient(90deg,#ec4899,#8b5cf6);box-shadow:0 10px 30px #ec489955}
-.small{font-size:13px;color:#c4b5fd;margin-top:14px}
-.cake{position:relative;width:180px;height:150px;margin:auto}.layer{position:absolute;left:10px;right:10px;bottom:12px;height:72px;border-radius:12px 12px 18px 18px;background:linear-gradient(#ffb4d9,#f472b6)}
-.top{position:absolute;left:5px;right:5px;bottom:72px;height:34px;border-radius:50%;background:#ffe4ef;border:5px solid #f9a8d4}.cream{position:absolute;left:14px;right:14px;bottom:57px;height:28px;background:white;border-radius:0 0 50% 50%}
-.candle{position:absolute;bottom:100px;width:12px;height:38px;border-radius:6px;background:#fef3c7}.c1{left:57px}.c2{left:84px}.c3{left:111px}
-.flame{position:absolute;width:15px;height:23px;top:-20px;left:-1px;border-radius:50%;background:linear-gradient(#fff,#fbbf24,#f97316);box-shadow:0 0 18px #fbbf24;animation:flicker .35s infinite alternate}
-.heart{position:absolute;font-size:20px;bottom:-20px;animation:heart 4s linear infinite;opacity:0;z-index:2}.h1{left:12%}.h2{left:78%;animation-delay:1.3s}.h3{left:45%;animation-delay:2.3s}
-@keyframes shine{to{background-position:250%}}@keyframes float{50%{transform:translateY(-10px)}}@keyframes flicker{to{transform:scale(1.12)}}@keyframes heart{0%{transform:translateY(0);opacity:0}15%{opacity:1}100%{transform:translateY(-90vh) rotate(20deg);opacity:0}}
-</style></head>
-<body><div id="app"><canvas id="fx"></canvas>
-<div class="heart h1">💗</div><div class="heart h2">💖</div><div class="heart h3">💕</div>
+.vignette{position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle,transparent 35%,rgba(0,0,0,.72) 100%);z-index:2}
+.scene{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:26px;
+opacity:0;visibility:hidden;transform:scale(1.08);transition:opacity 1s ease,transform 1.2s ease;z-index:4}
+.scene.active{opacity:1;visibility:visible;transform:scale(1)}
+.inner{width:min(430px,100%)}
+.tiny{font-size:11px;letter-spacing:5px;text-transform:uppercase;color:#c4b5fd;margin-bottom:22px}
+.big{font-size:clamp(46px,14vw,78px);line-height:.9;margin:0;font-weight:900;letter-spacing:-3px;
+background:linear-gradient(100deg,#fff,#ff9bd5,#d8b4fe,#fff);background-size:300%;
+-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 3s linear infinite}
+.sub{font-size:17px;line-height:1.7;color:#fce7f3;margin:24px auto;max-width:340px}
+.btn{border:1px solid #ffffff26;color:#fff;background:linear-gradient(100deg,#ec4899,#8b5cf6);
+border-radius:999px;padding:15px 27px;font-size:15px;font-weight:800;box-shadow:0 15px 45px #ec489955}
+.btn:active{transform:scale(.94)}
+.tap{font-size:11px;color:#a78bfa;margin-top:15px}
+.heartCore{font-size:74px;animation:heartbeat 1.3s infinite;filter:drop-shadow(0 0 30px #fb4f9c)}
+.type{font-size:19px;line-height:1.8;color:#fff1f8;min-height:145px}
+.type b{color:#ff9dcc}
+.cake{position:relative;width:200px;height:170px;margin:auto}
+.layer{position:absolute;left:8px;right:8px;bottom:12px;height:78px;border-radius:15px 15px 20px 20px;background:linear-gradient(#ffb5da,#ec4899);box-shadow:0 20px 45px #ec489955}
+.top{position:absolute;left:3px;right:3px;bottom:74px;height:38px;border-radius:50%;background:#fff0f7;border:5px solid #f9a8d4}
+.cream{position:absolute;left:15px;right:15px;bottom:56px;height:29px;background:#fff;border-radius:0 0 50% 50%}
+.candle{position:absolute;bottom:104px;width:13px;height:39px;border-radius:7px;background:#fde68a}
+.c1{left:61px}.c2{left:93px}.c3{left:125px}
+.flame{position:absolute;width:16px;height:24px;top:-21px;left:-1px;border-radius:50%;background:linear-gradient(#fff,#fbbf24,#f97316);box-shadow:0 0 25px #fbbf24;animation:flick .3s infinite alternate}
+.final{font-size:18px;line-height:1.8;color:#fdf2f8}
+.final strong{color:#ff9dcc;font-size:22px}
+.quote{font-style:italic;color:#c4b5fd;font-size:13px;margin-top:20px}
+.progress{position:absolute;top:18px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:8}
+.dot{width:22px;height:3px;border-radius:9px;background:#ffffff20;transition:.5s}
+.dot.on{background:#f472b6;box-shadow:0 0 10px #f472b6}
+@keyframes shine{to{background-position:300%}}
+@keyframes heartbeat{0%,100%{transform:scale(1)}15%{transform:scale(1.14)}30%{transform:scale(1)}45%{transform:scale(1.08)}60%{transform:scale(1)}}
+@keyframes flick{to{transform:scale(1.15) translateY(-2px)}}
+@media(max-width:420px){.sub{font-size:16px}.type{font-size:18px}}
+</style>
+</head>
+<body>
+<div id="app">
+<canvas id="fx"></canvas><div class="vignette"></div>
+<div class="progress"><span class="dot on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
 
-<section class="screen active" id="s1"><div class="card"><div class="emoji">🎁</div><h1>Hey Simmi!</h1><p class="subtitle">A little surprise is waiting for you... ✨</p><button onclick="next(2)">Open Your Surprise 💝</button><div class="small">Tap the button 👆</div></div></section>
-
-<section class="screen" id="s2"><div class="card"><div class="cake">
-<div class="candle c1"><div class="flame"></div></div><div class="candle c2"><div class="flame"></div></div><div class="candle c3"><div class="flame"></div></div><div class="top"></div><div class="cream"></div><div class="layer"></div></div>
-<h1>Happy Birthday!</h1><p class="message">🎂 Happy Birthday <span class="name">Simmi</span>! 🎂<br>May your day be filled with smiles, love, happiness and beautiful moments. ✨</p>
-<button onclick="next(3)">One More Surprise 🌸</button></div></section>
-
-<section class="screen" id="s3"><div class="card"><div class="emoji">🌸</div><h1>For Simmi</h1><p class="message">Keep smiling, keep shining and always stay the amazing person you are. 💫<br><br>I hope this new year of your life brings you everything that makes your heart happy. ❤️</p><button onclick="celebrate()">Make a Wish ✨</button><div class="small" id="wish">Close your eyes and make a wish... 🎀</div></div></section>
+<section class="scene active" id="s1">
+<div class="inner">
+<div class="tiny">A little secret</div>
+<div class="heartCore">♡</div>
+<h1 class="big">Wait...</h1>
+<p class="sub">This isn't just another birthday wish.<br><br>Someone made something especially for you. ✨</p>
+<button class="btn" onclick="go(2)">Find Out 💌</button>
+<div class="tap">tap to continue</div>
 </div>
+</section>
+
+<section class="scene" id="s2">
+<div class="inner">
+<div class="tiny">The person behind this</div>
+<h1 class="big">SIMMI</h1>
+<p class="sub">There are people we meet...<br>and then there are people who quietly become special. ❤️</p>
+<div class="type" id="typing"></div>
+<button class="btn" onclick="go(3)">Keep Reading ✨</button>
+</div>
+</section>
+
+<section class="scene" id="s3">
+<div class="inner">
+<div class="tiny">Today is your day</div>
+<div class="cake">
+<div class="candle c1"><div class="flame"></div></div>
+<div class="candle c2"><div class="flame"></div></div>
+<div class="candle c3"><div class="flame"></div></div>
+<div class="top"></div><div class="cream"></div><div class="layer"></div>
+</div>
+<h1 class="big">HAPPY<br>BIRTHDAY</h1>
+<p class="sub">🎂 May your smile stay brighter than every candle on this cake. 🎂</p>
+<button class="btn" onclick="go(4)">Make It Special 🎆</button>
+</div>
+</section>
+
+<section class="scene" id="s4">
+<div class="inner">
+<div class="tiny">One thing I want you to know</div>
+<div class="heartCore">♥</div>
+<p class="final">
+<span id="finalText"></span>
+</p>
+<button class="btn" onclick="go(5)">One Last Surprise 🌙</button>
+</div>
+</section>
+
+<section class="scene" id="s5">
+<div class="inner">
+<div class="tiny">For you, Simmi</div>
+<h1 class="big">KEEP<br>SMILING.</h1>
+<p class="final">
+Because your happiness matters. 🫶<br><br>
+<strong>Happy Birthday, Simmi. ❤️</strong><br>
+May this year be kinder, brighter and more beautiful than the last.
+</p>
+<button class="btn" onclick="celebrate()">Make A Wish ✨</button>
+<div class="quote" id="wish">Close your eyes for 3 seconds...</div>
+</div>
+</section>
+</div>
+
 <script>
-const c=document.getElementById("fx"),x=c.getContext("2d");let W,H,stars=[],bits=[];
-function size(){W=c.width=innerWidth;H=c.height=innerHeight}addEventListener("resize",size);size();
-for(let i=0;i<90;i++)stars.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.7+.3,a:Math.random()*6.28});
-function draw(){x.clearRect(0,0,W,H);stars.forEach(s=>{s.a+=.02;x.fillStyle="rgba(255,255,255,"+(.25+.35*(Math.sin(s.a)+1)/2)+")";x.beginPath();x.arc(s.x,s.y,s.r,0,7);x.fill()});bits.forEach((b,i)=>{b.y+=b.v;b.x+=Math.sin(b.t)*.7;b.t+=.05;b.r+=b.rs;x.save();x.translate(b.x,b.y);x.rotate(b.r);x.fillStyle=b.c;x.fillRect(-4,-6,8,12);x.restore();if(b.y>H+30)bits.splice(i,1)});requestAnimationFrame(draw)}draw();
-function next(n){document.querySelectorAll(".screen").forEach(s=>s.classList.remove("active"));document.getElementById("s"+n).classList.add("active");if(n>1)burst()}
-function burst(){let colors=["#f472b6","#c084fc","#fde68a","#fb7185","#67e8f9","#fff"];for(let i=0;i<110;i++)bits.push({x:W/2,y:H*.4,v:Math.random()*6+3,t:Math.random()*10,r:Math.random()*6,rs:(Math.random()-.5)*.2,c:colors[Math.floor(Math.random()*colors.length)]})}
-function celebrate(){burst();burst();document.getElementById("wish").textContent="✨ Wish sent to the universe! Happy Birthday, Simmi! 💖"}
-</script></body></html>
+const canvas=document.getElementById("fx"),ctx=canvas.getContext("2d");
+let W,H,stars=[],bits=[],petals=[];
+function resize(){W=canvas.width=innerWidth;H=canvas.height=innerHeight}
+addEventListener("resize",resize);resize();
+for(let i=0;i<130;i++)stars.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.6+.2,a:Math.random()*6.28,s:.01+Math.random()*.02});
+function burst(n=100){
+let cs=["#f472b6","#fb7185","#c084fc","#fde68a","#67e8f9","#fff"];
+for(let i=0;i<n;i++)bits.push({x:W/2+(Math.random()-.5)*100,y:H*.43,
+vx:(Math.random()-.5)*7,vy:Math.random()*-8-2,g:.15,r:Math.random()*6,rs:(Math.random()-.5)*.3,c:cs[Math.floor(Math.random()*cs.length)]});
+}
+function draw(){
+ctx.clearRect(0,0,W,H);
+stars.forEach(s=>{s.a+=s.s;ctx.fillStyle="rgba(255,255,255,"+(.18+.45*(Math.sin(s.a)+1)/2)+")";ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,7);ctx.fill()});
+bits.forEach((b,i)=>{b.vy+=b.g;b.x+=b.vx;b.y+=b.vy;b.r+=b.rs;ctx.save();ctx.translate(b.x,b.y);ctx.rotate(b.r);ctx.fillStyle=b.c;ctx.fillRect(-4,-7,8,14);ctx.restore();if(b.y>H+40)bits.splice(i,1)});
+requestAnimationFrame(draw)
+}draw();
+
+const dots=[...document.querySelectorAll(".dot")];
+function go(n){
+document.querySelectorAll(".scene").forEach(s=>s.classList.remove("active"));
+document.getElementById("s"+n).classList.add("active");
+dots.forEach((d,i)=>d.classList.toggle("on",i===n-1));
+if(n===2)type();
+if(n===3)burst(80);
+if(n===4){burst(140);finalType()}
+if(n===5){burst(180)}
+}
+function type(){
+const el=document.getElementById("typing");
+const text="And somehow, you became one of those people I genuinely care about. I hope today reminds you just how loved, valued and special you are. 💗";
+el.innerHTML="";let i=0;
+const t=setInterval(()=>{el.innerHTML=text.slice(0,i++);if(i>text.length)clearInterval(t)},28);
+}
+function finalType(){
+const el=document.getElementById("finalText");
+const text="Simmi, life changes, people change, moments pass... but some people leave a little warmth behind. I hope you always remember that you deserve happiness, peace and all the beautiful things you dream about. And today, more than anything — I just want to see you smile. ❤️";
+el.innerHTML="";let i=0;
+const t=setInterval(()=>{el.innerHTML=text.slice(0,i++);if(i>text.length)clearInterval(t)},24);
+}
+function celebrate(){
+burst(250);setTimeout(()=>burst(180),600);setTimeout(()=>burst(180),1200);
+document.getElementById("wish").textContent="✨ Wish sent. Now smile, birthday girl. 💗";
+}
+</script>
+</body>
+</html>
